@@ -2,6 +2,12 @@ package study;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        ShopRepository repo = new ShopRepository();
+
+
+//        repo.remove(12);
+
+
     }
+
 }
