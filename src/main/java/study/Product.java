@@ -1,6 +1,7 @@
 package study;
 
 import java.util.Objects;
+
 import lombok.Getter;
 
 public class Product {
@@ -36,6 +37,10 @@ public class Product {
     }
 
     public int getId() {
+        return id;
+    }
+
+    public int findById() {
         return id;
     }
 

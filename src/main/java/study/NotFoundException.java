@@ -1,7 +1,9 @@
 package study;
 
-public class NotFoundException extends NegativeArraySizeException {
-    public NotFoundException (String msg) {
-        super(msg);
+public class NotFoundException extends ArrayIndexOutOfBoundsException {
+    public NotFoundException(String s) {
+        super(s);
     }
+
 }
+
