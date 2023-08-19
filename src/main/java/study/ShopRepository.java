@@ -28,12 +28,8 @@ public class ShopRepository {
     public void add(Product product) {
         int productId = product.getId();
         for (Product prod : products) {
-            if (prod.getId() == product.getId()) {
-                throw new NotFoundException(
-
-                        "Element with id: " + product.getId() + " already exist"
-                );
-
+            if (prod.getId() == productId) {
+                throw new NotFoundException(productId);
             }
         }
         products = addToArray(products, product);
@@ -51,16 +47,13 @@ public class ShopRepository {
                 return product;
             }
         }
-
-        throw new NotFoundException("Element with id: " + id + " not found");
+        return null;
     }
 
-
     public void remove(int id) {
-        if (id < 0) {
-            throw new NotFoundException(
-                    "Element with id: " + id + " not found"
-            );
+        Product foundProduct = findById(id);
+        if (foundProduct == null) {
+            throw new NotFoundException(id);
         }
         Product[] tmp = new Product[products.length - 1];
         int copyToIndex = 0;

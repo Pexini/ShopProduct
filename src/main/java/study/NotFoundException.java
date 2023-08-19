@@ -1,8 +1,9 @@
 package study;
 
-public class NotFoundException extends ArrayIndexOutOfBoundsException {
-    public NotFoundException(String s) {
-        super(s);
+public class NotFoundException extends RuntimeException {
+    public NotFoundException(int id) {
+
+        super("Element with id: " + id + " not found");
     }
 
 }

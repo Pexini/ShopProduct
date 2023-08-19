@@ -9,12 +9,9 @@ public class Product {
     @Getter
     protected int id;
 
-    public String getTitle() {
-        return title;
-    }
-
     protected String title;
     protected int price;
+
 
     public Product(int id, String title, int price) {
         this.id = id;
@@ -38,6 +35,10 @@ public class Product {
 
     public int getId() {
         return id;
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     public int findById() {
